@@ -1,13 +1,13 @@
 import express from 'express'
 import dotenv from 'dotenv'
-
+import {nanoid} from 'nanoid'
 dotenv.config()
 
 const app = express()
 app.use(express.json())
 
 app.get('/api/create', (req, res) => {
-    
+res.send(nanoid(7))
 })
 
 app.listen(process.env.PORT, () => {
