@@ -9,7 +9,7 @@ const shortUrlSchema = new mongoose.Schema(
     shortUrl: {
       type: String,
       unique: true,
-      index:true,
+      index: true,
       required: true,
     },
     clicks: {
@@ -28,4 +28,4 @@ const shortUrlSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Url", shortUrlSchema);
+export default mongoose.model("shortUrl", shortUrlSchema);
